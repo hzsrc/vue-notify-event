@@ -1,7 +1,7 @@
 # vue-notify-event
 触发vue事件到整个组件树的任意组件。(Fire vue events to any component in whole components tree.)
 
-在Vue中，我们通过`$emit`触发事件到父组件，但没法触发事件道再上层的祖先组件。(In vue child component we use `$emit` to fire event to parent component but we cannot fire event to ancestors components.)
+在Vue中，我们通过`$emit`触发事件到父组件，但没法触发事件到再上层的祖先组件。(In vue child component we use `$emit` to fire event to parent component but we cannot fire event to ancestors components.)
 
 同时在父组件中我们通过`props`和`watch`传递事件给子组件。这并不方便，并且我们没法触发事件给再下层的孙组件。(And in parent component we use `props` and child's `watch` to notify child component. This is not convenient and we cannot send event to grandson components.)
 
@@ -68,7 +68,7 @@ $notify(eventName, argObj, fnFilter)
 ##### [fnFilter]
 function(comp: VueComponent) : Boolean
 
-过滤下层树组件的函数，返回true的组件才会被调用。(A function to filter sub components, component will be called when it return true.)
+过滤下层树组件的函数，返回true的组件才会被调用。可以不传，此时所有组件都被调用。(A function to filter sub components, component will be called when it return true. If no `fnFilter`, all is called.)
 
 * Sample template:
 ```
@@ -127,7 +127,7 @@ function(comp: VueComponent) : Boolean
 ##### [fnFilter]
 function(comp: VueComponent) : Boolean
 
-过滤下层树组件的函数，返回true的组件才会被调用。(A function to filter sub components, component will be called when it return true.)
+过滤下层树组件的函数，返回true的组件才会被调用。可以不传，此时所有组件都被调用。(A function to filter sub components, component will be called when it return true. If no `fnFilter`, all is called.)
 * Sample template:
 ```
 <div>
