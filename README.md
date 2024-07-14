@@ -62,7 +62,7 @@ export const Ancestor = {
 
 
 ### 3. `$notify` and `notified`
-$notify(eventName, argObj, fnFilter)
+$notify(eventName, argObj[, fnFilter])
 
 触发事件到当前组件下整个组件树的组件，包括所有子孙组件，直到调用了`stopEvent()`为止。(Fire events to whole sub tree below current component, include children and grandsons and great-grandsons components, util `stopEvent()` called.)
 ##### [fnFilter]
@@ -117,7 +117,7 @@ export const Child = {
 
 
 ### 4. `$notifyTree` and `notified`
-$notifyTree(eventName, fnCheckRoot, argObj, fnFilter)
+$notifyTree(eventName, fnCheckRoot, argObj[, fnFilter])
 
 触发事件到当前组件树的其他分支上的组件，如兄弟组件、堂兄第组件、姑舅组件等等，直到调用了`stopEvent()`为止。(Fire events to other-branch-components of whole tree, like siblings/uncle/cousin components and so on, util `stopEvent()` called.)
 ##### fnCheckRoot
