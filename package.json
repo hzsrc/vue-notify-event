@@ -1,0 +1,40 @@
+{
+  "name": "vue-notify-event",
+  "version": "1.0.1",
+  "description": "Fire vue events to any component in whole components tree.",
+  "private": false,
+  "scripts": {
+    "build": "cross-env NODE_ENV=production ENV_CONFIG=prod node build/build.js",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "uglify-js": "^3.18.0"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "license": "MIT",
+  "readme": "README.md",
+  "keywords": [],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "author": {
+    "name": "James.Huang",
+    "email": "hz932@qq.com",
+    "url": "http://www.hz300.com/vue-notify-event/"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "src",
+    "dist",
+    "README.md"
+  ]
+}
